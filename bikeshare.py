@@ -1,6 +1,7 @@
 
 # Vinothkumar Kolluru
-
+import matplotlib as plt
+import seaborn as sns
 import time
 import pandas as pd
 import numpy as np
@@ -17,7 +18,7 @@ weekdays = ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday',
             'saturday')
 
 
-def choice(prompt, choices=('y', 'n')):
+def choice(prompt, choices=('y', 'n')):#Choice
     """Return a valid input from the user given an array of possible answers.
     """
 
@@ -42,7 +43,7 @@ def choice(prompt, choices=('y', 'n')):
     return choice
 
 
-def get_filters():
+def get_filters():# Filters as needed by user
     """Ask user to specify city(ies) and filters, month(s) and weekday(s).
 
     Returns:
@@ -80,7 +81,7 @@ def get_filters():
     return city, month, day
 
 
-def load_data(city, month, day):
+def load_data(city, month, day):#Load data
     """Load data for the specified filters of city(ies), month(s) and
        day(s) whenever applicable.
 
@@ -135,7 +136,7 @@ def load_data(city, month, day):
     return df
 
 
-def time_stats(df):
+def time_stats(df):# Time Statistics
     """Display statistics on the most frequent times of travel."""
 
     print('\nDisplaying the statistics on the most frequent times of '
@@ -161,7 +162,7 @@ def time_stats(df):
     print('-'*40)
 
 
-def station_stats(df):
+def station_stats(df):#Station statistics
     """Display statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -324,6 +325,7 @@ def raw_data(df, mark_place):
 def main():
     while True:
         click.clear()
+        Print('Hi Good day!')
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
