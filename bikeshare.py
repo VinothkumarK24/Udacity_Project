@@ -325,7 +325,10 @@ def raw_data(df, mark_place):
 def main():
     while True:
         click.clear()
+<<<<<<< HEAD
         Print('Hi Good day!')
+=======
+>>>>>>> documentation
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
