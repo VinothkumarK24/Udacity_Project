@@ -18,7 +18,7 @@ weekdays = ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday',
             'saturday')
 
 
-def choice(prompt, choices=('y', 'n')):
+def choice(prompt, choices=('y', 'n')):#Choice
     """Return a valid input from the user given an array of possible answers.
     """
 
@@ -43,7 +43,7 @@ def choice(prompt, choices=('y', 'n')):
     return choice
 
 
-def get_filters():
+def get_filters():# Filters as needed by user
     """Ask user to specify city(ies) and filters, month(s) and weekday(s).
 
     Returns:
@@ -325,6 +325,7 @@ def raw_data(df, mark_place):
 def main():
     while True:
         click.clear()
+        Print('Hi Good day!')
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
